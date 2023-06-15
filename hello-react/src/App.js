@@ -6,25 +6,21 @@ function App() {
       title: "Build the website with static content",
       dueDate: "10th April",
       assigneeName: "Rohit S",
-      status: "pending",
     },
     {
       title: "Add a blog",
       dueDate: "22nd March",
       assigneeName: "Rohit M",
-      status: "pending",
     },
     {
       title: "Design the mockup",
       completedDate: "10th April",
       assigneeName: "Rohit M",
-      status: "done",
     },
     {
       title: "Get the approval from principal",
       completedDate: "20th April",
       assigneeName: "Ajay S",
-      status: "done",
     },
   ];
 
@@ -42,7 +38,7 @@ function App() {
           <h2 className="text-2xl font-bold text-slate-500 mb-2">Pending</h2>
           <div>
             {tasks
-              .filter((task) => task.status === "pending")
+              .filter((task) => task.dueDate)
               .map((task) => (
                 <TaskCard {...task} />
               ))}
@@ -55,7 +51,7 @@ function App() {
           <h2 className="text-2xl font-bold text-slate-500 mb-2">Done</h2>
           <div>
             {tasks
-              .filter((task) => task.status === "done")
+              .filter((task) => task.completedDate)
               .map((task) => (
                 <TaskCard {...task} />
               ))}
