@@ -14,12 +14,12 @@ function App() {
     },
     {
       title: "Design the mockup",
-      completedDate: "10th April",
+      completedAtDate: "10th April",
       assigneeName: "Rohit M",
     },
     {
       title: "Get the approval from principal",
-      completedDate: "20th April",
+      completedAtDate: "20th April",
       assigneeName: "Ajay S",
     },
   ];
@@ -51,7 +51,7 @@ function App() {
           <h2 className="text-2xl font-bold text-slate-500 mb-2">Done</h2>
           <div>
             {tasks
-              .filter((task) => task.completedDate)
+              .filter((task) => task.completedAtDate)
               .map((task) => (
                 <TaskCard {...task} />
               ))}
